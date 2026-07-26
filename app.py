@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+import libreria_funciones as lf
 st.title("Proyecto Módulo 1 Fundamentals")
 st.sidebar.title("Parámetros")
 
@@ -26,5 +27,12 @@ elif modulo == "Módulo Array":
   st.write("La producción promedio es:", np.mean(datos_produccion))
 else:
   st.write("Estas en el módulo de funciones")
+  
+  principal = st.number_input("Ingrese el Monto del préstamo",value=0) 
+  tasa_anual = st.number_input("Ingrese la Tasa anual en decimal",value=0.10) 
+  anios = st.number_input("Ingrese el Número de años del préstamo",value=1) 
+  pago_por_anio = st.number_input("Ingrese Cantidad de pagos por año",value=12) 
 
+  cuota = lf.cuota_prestamo(principal,tasa_anual,anios,pago_por_anio)
+  st.write("La cuota mensual de pago será:", cuota)
 
