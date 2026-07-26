@@ -12,7 +12,7 @@ if modulo == "Módulo Listas":
   valor_final = st.number_input("Ingrese el valor final",value=1) 
   lista_numerica = list(range(valor_inicial,valor_final))
   st.write(lista_numerica)
-else modulo == "Módulo Array":
+elif modulo == "Módulo Array":
   st.write("Estás en el modulo arreglos")
 
 else:
